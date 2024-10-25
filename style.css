@@ -1,0 +1,355 @@
+/* General body styling */
+body {
+    background-color: #f7e7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+    transition: all 0.3s ease;
+}
+
+
+/* Container for To-Do List Page */
+.todo-container {
+    padding: 20px;
+    text-align: left;
+    background-color: #f8deb2;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.todo-title {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* To-Do List Form */
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Patrick Hand', cursive;
+    margin-bottom: 10px;
+}
+
+#todo-form button {
+    padding: 10px;
+    background-color: #76c7c0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+    transition: background-color 0.3s;
+}
+
+#todo-form button:hover {
+    background-color: #4da6ff;
+}
+
+/* Styling for To-Do List Items */
+#todo-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#todo-list li {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#todo-list li::before {
+    content: '○';
+    margin-right: 10px;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Image Styling */
+.todo-banner {
+    width: 100%;
+    height: auto;
+    max-height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+/* Card Styling */
+.card {
+    background-color: #f8deb2;
+    width: 90%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Menu Styling */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #76c7c0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'Patrick Hand', cursive;
+    width: 100px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4da6ff;
+}
+
+h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Hidden pages by default */
+.page {
+    display: none;
+}
+
+/* Active page display */
+.page.active {
+    display: block;
+}
+
+.gratitude-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gratitude-image {
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.gratitude-text {
+    color: #4d4d4d;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#gratitude-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#gratitude-input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Water intake section */
+/* Water Intake Section Styling */
+.water-intake-section {
+    background-color: #f8deb2; /* Matches your design */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 300px;
+}
+
+h3 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.water-drops {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.water-drop {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s, text-decoration 0.3s;
+    margin: 10px;
+    color: #76c7c0; /* Water drop color */
+}
+
+.water-drop.crossed {
+    text-decoration: line-through;
+    color: #ccc;
+    transform: scale(0.9); /* Slightly reduce size when clicked */
+}
+
+
+/* Morning Routine Section */
+.morning-routine-section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0d29d;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.morning-routine-title {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.morning-routine-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 items per row */
+    grid-gap: 15px;
+    justify-items: center;
+}
+
+
+.routine-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.routine-item img.routine-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.routine-item label {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.routine-item input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .todo-container, .card, .morning-routine-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .morning-routine-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Container for Notes Section */
+.note-section {
+    background-color: #f8deb2; /* Background color similar to your design */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.note-banner {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Styling for Notes Textarea */
+#note-input {
+    width: 100%;
+    height: auto;
+    background-color: #fef6e4; /* Light background to match the paper feel */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    line-height: 24px; /* To mimic notebook lines */
+    outline: none;
+    resize: none;
+    background-image: linear-gradient(to bottom, transparent 95%, #ddd 96%); /* Mimics underlined text */
+    background-size: 100% 30px; /* Controls the spacing of the underlines */
+}
+
+#note-input:focus {
+    border: 1px solid #76c7c0; /* Border color when active */
+}
+
+#note-input::placeholder {
+    color: #a3a3a3;
+}

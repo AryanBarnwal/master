@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tisha's Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- Page 1 (Profile Section) -->
+        <div class="page active" id="profile-page">
+            <div class="profile-section">
+                <img src="/profile.png" alt="Tisha's Profile" class="profile-img">
+                <h2>Tisha's Day</h2>
+                <p>Quote of the day: "Your favorite quote here."</p>
+            </div>
+
+            <div class="menu">
+                <button onclick="goToPage('todo-page')">To Do List</button>
+                <button onclick="goToPage('routine-page')">Morning Routine</button>
+                <button onclick="goToPage('gratitude-page')">Gratitude</button>
+                <button onclick="goToPage('water-page')">Water Intake</button>
+                <button onclick="goToPage('notes-page')">Notes</button>
+            </div>
+        </div>
+
+        <!-- Page 2 (To-Do List Section) -->
+        <!-- <div class="page" id="todo-page">
+            <div class="todo-list">
+                <h2>To Do List:</h2>
+                <ul>
+                    <li><input type="checkbox"> <span>Task 1</span></li>
+                    <li><input type="checkbox"> <span>Task 2</span></li>
+                    <li><input type="checkbox"> <span>Task 3</span></li>
+                </ul>
+                <button onclick="goToPage('profile-page')">Back</button>
+            </div>
+        </div> -->
+        <div class="page" id="todo-page">
+            <div class="todo-container">
+                <img src="/todohead.jpg" alt="To Do List" class="todo-banner">
+           
+                <form id="todo-form">
+                    <input type="text" id="task-input" placeholder="Enter a task" />
+                    <button type="button" onclick="addTask()">Add Task</button>
+                </form>
+        
+                <ul id="todo-list">
+                    <!-- Dynamically added tasks will appear here -->
+                </ul>
+        
+                <button onclick="goToPage('profile-page')">Back</button>
+            </div>
+        </div>
+
+        <!-- Page 3 (Morning Routine Section) -->
+
+        <div class="page" id="routine-page">
+            <div class="morning-routine-section">
+                <h2 class="morning-routine-title">Morning Routine</h2>
+                <div class="morning-routine-items">
+                    <div class="routine-item">
+                        <img src="/detox.webp" alt="Detox Water" class="routine-img">
+                        <label for="detox-water">Detox Water</label>
+                        <input type="checkbox" id="detox-water">
+                    </div>
+                    <div class="routine-item">
+                        <img src="/exercise.jpg" class="routine-img">
+                        <label for="exercise">Exercise</label>
+                        <input type="checkbox" id="exercise">
+                    </div>
+                    <div class="routine-item">
+                        <img src="/meditation.jfif" alt="Meditation" class="routine-img">
+                        <label for="meditation">Meditation</label>
+                        <input type="checkbox" id="meditation">
+                    </div>
+                    <div class="routine-item">
+                        <img src="/shower.jpg" alt="Shower" class="routine-img">
+                        <label for="shower">Shower</label>
+                        <input type="checkbox" id="shower">
+                    </div>
+                    <div class="routine-item">
+                        <img src="/skincare.jpg" alt="Skincare" class="routine-img">
+                        <label for="skincare">Skincare Rituals</label>
+                        <input type="checkbox" id="skincare">
+                    </div>
+                    <div class="routine-item">
+                        <img src="/breakfast.jpg" alt="Breakfast" class="routine-img">
+                        <label for="breakfast">Breakfast</label>
+                        <input type="checkbox" id="breakfast">
+                    </div>
+                </div>
+                <button onclick="goToPage('profile-page')">Back</button>
+            </div>
+        </div>
+
+        <!-- Page 4 (Gratitude Section) -->
+        <div class="page" id="gratitude-page">
+            <div class="gratitude-container">
+                <img src="gratitude1.jpeg" alt="Gratitude Image" class="gratitude-image">
+                
+                <!-- Dynamic Text Will Be Displayed Here -->
+                <div class="gratitude-text" id="display-gratitude">
+                    <!-- User input will appear here -->
+                </div>
+            </div>
+
+            <!-- Input Form for user -->
+            <form id="gratitude-form">
+                <textarea id="gratitude-input" rows="4" placeholder="Enter the things you're grateful for..."></textarea>
+                <br>
+                <button type="button" onclick="submitGratitude()">Submit</button>
+            </form>
+
+            <button onclick="goToPage('profile-page')">Back</button>
+        </div>
+
+        <!-- Page 5 (Water Intake Section) -->
+        <div class="page" id="water-page">
+            <div class="water-intake-section">
+                <h2>Water Intake:</h2>
+                <div class="water-drop">
+                    <span class="water-drop" onclick="toggleCross(this)">💧</span>
+                    <span class="water-drop" onclick="toggleCross(this)">💧</span>
+                    <span class="water-drop" onclick="toggleCross(this)">💧</span>
+                    <span class="water-drop" onclick="toggleCross(this)">💧</span>
+                    <span class="water-drop" onclick="toggleCross(this)">💧</span>
+                </div>
+                <button onclick="goToPage('profile-page')">Back</button>
+            </div>
+        </div>
+        <!-- Page 6 (Notes Section) -->
+        <div class="page" id="notes-page">
+            <div class="notes-section">
+                <div class="note-section">
+                    <img src="/note.jpg" alt="Notes Banner" class="note-banner">
+                    <textarea id="note-input" rows="8" placeholder="Write your notes here..."></textarea>                
+                <button onclick="goToPage('profile-page')">Back</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
